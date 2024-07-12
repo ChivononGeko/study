@@ -1,0 +1,32 @@
+﻿<Window x:Class="BankSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bank System" Height="450" Width="525">
+	<Grid>
+		<StackPanel>
+			<!-- Client Management -->
+			<TextBox x:Name="txtClientName" Width="200" Margin="10" Text="Имя клиента" Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" />
+			<Button x:Name="btnAddClient" Content="Добавить клиента" Width="120" Margin="10" Click="btnAddClient_Click" />
+
+			<!-- Client List -->
+			<ListBox x:Name="lstClients" Width="200" Height="100" Margin="10" SelectionChanged="lstClients_SelectionChanged" />
+
+			<!-- Account Management -->
+			<ComboBox x:Name="cmbAccountType" Width="200" Margin="10">
+				<ComboBoxItem Content="Недепозитный" />
+				<ComboBoxItem Content="Депозитный" />
+			</ComboBox>
+			<Button x:Name="btnOpenAccount" Content="Открыть счет" Width="100" Margin="10" Click="btnOpenAccount_Click" />
+			<Button x:Name="btnCloseAccount" Content="Закрыть счет" Width="100" Margin="10" Click="btnCloseAccount_Click" />
+
+			<!-- Account List -->
+			<ListBox x:Name="lstAccounts" Width="200" Height="100" Margin="10" SelectionMode="Multiple" />
+
+			<!-- Transfer and Deposit -->
+			<TextBox x:Name="txtTransferAmount" Width="200" Margin="10" Text="Сумма перевода" Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" />
+			<Button x:Name="btnTransfer" Content="Перевод" Width="100" Margin="10" Click="btnTransfer_Click" />
+			<TextBox x:Name="txtDepositAmount" Width="200" Margin="10" Text="Сумма пополнения" Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" />
+			<Button x:Name="btnDeposit" Content="Пополнить" Width="100" Margin="10" Click="btnDeposit_Click" />
+		</StackPanel>
+	</Grid>
+</Window>
